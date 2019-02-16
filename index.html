@@ -4,24 +4,26 @@
   <meta charset="UTF-8">
   <title>Places App</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Staatliches|Varela+Round" rel="stylesheet">
   <script src="js/app.js"></script>
 </head>
 <body>
   <form id="new-place-form">
     <div id="form-wrapper">
-      <div>
+      <div class="form-item">
       <label for="file">File progress:</label>
-      <progress id="fileProgress" max="100" value="70"> 70% </progress>
+      <progress id="fileProgress" max="100" value="60"> 60% </progress>
       </div>
 
       <div class="form-item">
         <label for="country" class="primary">Country</label>
-        <input type="text" id="country" required/>
+        <input class="input-box" type="text" id="country" required/>
       </div>
 
       <div class="form-item">
         <label for="cityarea" class="primary">City/Area</label>
-        <input type="text" id="cityarea" required/>
+        <input class="input-box" type="text" id="cityarea" required/>
       </div>
 
       <div class="form-item">
@@ -34,43 +36,44 @@
           <option value="I wouldn't go back">I wouldn't go back</option>
         </select>
       </div>
-
-      <div class="form-item">
+      <div class="review-item-title">
         <label for="review" class="primary">Review</label>
       </div>
+      <div id="form-review">
 
-      <div>
+      <div class="review-item">
         <input type="radio" id="one" name="review" value="1 Star" checked>
-        <label for="1 Star">1 star</label>
+        <label class="review-tag" for="1 Star">1 star</label>
       </div>
 
-      <div>
+      <div class="review-item">
         <input type="radio" id="two" name="review" value="2 Stars">
-        <label for="2 Stars">2 stars</label>
+        <label class="review-tag" for="2 Stars">2 stars</label>
       </div>
 
-      <div>
+      <div class="review-item">
         <input type="radio" id="three" name="review" value="3 stars">
-        <label for="3 stars">3 stars</label>
+        <label class="review-tag" for="3 stars">3 stars</label>
       </div>
 
-      <div>
+      <div class="review-item">
         <input type="radio" id="four" name="review" value="4 stars">
-        <label for="4 stars">4 stars</label>
+        <label class="review-tag" for="4 stars">4 stars</label>
       </div>
 
-      <div>
+      <div class="review-item">
         <input type="radio" id="five" name="review" value="5 stars">
-        <label for="5 stars">5 stars</label>
+        <label class="review-tag" for="5 stars">5 stars</label>
+      </div>
       </div>
 
       <div class="form-item">
-        <label for="favething">Anything to say about this place?</label>
-        <input type="text" id="favething">
+        <label class="primary" for="favething">Anything to say about this place?</label>
+        <input class="input-box" type="text" id="favething">
       </div>
 
     </div>
-    <input type="submit" value="save"/>
+    <input class="save" type="submit" value="save"/>
   </form>
 
   <button id="delete-all">Delete All</button>

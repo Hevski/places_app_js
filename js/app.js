@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const button = document.querySelector('#delete-all');
   button.addEventListener('click', handleDeleteClick);
+  console.log(form);
 })
 
 const handleNewPlaceFormSubmit = function (event) {
@@ -14,34 +15,44 @@ const handleNewPlaceFormSubmit = function (event) {
   placesList.appendChild(placeListItem)
 
   event.target.reset();
-  console.log(event);
+}
+
+// increase progress bar
+// check value is not empty on other targets
+
+const increaseProgressBar = function (form) {
+  const progress = document.getElementById('fileProgress').position + 0.1
 }
 
 const createPlacesListItem = function (form) {
-  const placeListItem = document.createElement('li');
-  placeListItem.classList.add('places-list-item');
 
   const progress = document.getElementById('fileProgress').position
-  
+  // console.log(progress);
+
+  console.log(event);
+  const placeListItem = document.createElement('li');
+  placeListItem.className = "li-list"
+  placeListItem.classList.add('places-list-item');
 
   const listCountry = document.createElement('p')
-  listCountry.textContent = `Country: ${event.target.country.value}`
+  listCountry.className = "p-list"
+  listCountry.textContent = event.target.country.value
   placeListItem.appendChild(listCountry)
 
   const listCityArea = document.createElement('p')
-  listCityArea.textContent = `City/Area: ${event.target.cityarea.value}`
+  listCityArea.textContent = event.target.cityarea.value
   placeListItem.appendChild(listCityArea)
 
   const selection = document.createElement('p')
-  selection.textContent = `Selection: ${event.target.selection.value}`
+  selection.textContent = event.target.selection.value
   placeListItem.appendChild(selection)
 
   const review = document.createElement('p')
-  review.textContent = `Review: ${event.target.elements["review"].value}`
+  review.textContent = event.target.elements["review"].value
   placeListItem.appendChild(review)
 
   const faveThing = document.createElement('p')
-  faveThing.textContent = `Fave thing: ${event.target.favething.value}`
+  faveThing.textContent = event.target.favething.value
   placeListItem.appendChild(faveThing)
 
   return placeListItem;
