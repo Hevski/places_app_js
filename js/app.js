@@ -17,17 +17,7 @@ const handleNewPlaceFormSubmit = function (event) {
   event.target.reset();
 }
 
-// increase progress bar
-// check value is not empty on other targets
-
-const increaseProgressBar = function (form) {
-  const progress = document.getElementById('fileProgress').position + 0.1
-}
-
 const createPlacesListItem = function (form) {
-
-  const progress = document.getElementById('fileProgress').position
-  // console.log(progress);
 
   console.log(event);
   const placeListItem = document.createElement('li');
@@ -56,12 +46,6 @@ const createPlacesListItem = function (form) {
   placeListItem.appendChild(faveThing)
 
   return placeListItem;
-
-  function display() {
-  var x = document.getElementById("myRadio").value;
-  alert("The value of the radio button is: " + x);
-}
-
 }
 
 const handleDeleteClick = function (event) {
